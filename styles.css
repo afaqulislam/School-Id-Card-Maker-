@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+}
+
+#id-card-wrapper {
+    display: flex; /* Flexbox for inline layout */
+    justify-content: space-between;
+    gap: 20px; /* Space between front and back cards */
+}
+
+.logo{
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 70px 0;
+}
+.span{
+    color: red;
+    font-size: 40px;
+}
+h4{
+    font-size: 25px;
+    text-align: center;
+    margin: 10px 70px 0;
+}
+
+.span-built{
+    color: red;
+    font-size: 30px;
+}
+/* Card styling for both front and back */
+.id-card, .id-card-back {
+    width: 320px;
+    height: 520px;
+    background: #ffffff;
+    margin: 20px 0;
+    border: 2px solid #004aad;
+    font-weight: 600;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.id-card:hover, .id-card-back:hover {
+    transform: scale(1.05);
+}
+
+/* Front Side Styles */
+.id-card-header {
+    background: linear-gradient(135deg, #004aad, #00a8e8);
+    padding: 25px 20px;
+    color: white;
+    border-bottom-left-radius: 60% 15%;
+    border-bottom-right-radius: 60% 15%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.id-card-header h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.id-card-header h3 {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.id-card-photo {
+    margin: 30px 0 15px;
+}
+
+.id-card-photo img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid #004aad;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.id-card-details {
+    padding: 15px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.id-card-details h3 {
+    text-align: center;
+    color: #004aad;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.id-card-details p {
+    margin: 8px 0;
+    color: #333;
+}
+
+.id-card-details p strong {
+    color: #004aad;
+}
+
+.id-card-footer {
+    background: #004aad;
+    color: white;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 13px;
+    letter-spacing: normal;
+    text-transform: capitalize;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.id-card-footer p {
+    margin: 0;
+}
+
+/* Back Side Styles */
+.id-card-back {
+    background: #ffffff;
+    border-radius: 15px;
+}
+
+.id-card-header-back {
+    background: linear-gradient(135deg, #004aad, #00a8e8);
+    padding: 15px 20px;
+    color: white;
+    border-bottom-left-radius: 60% 15%;
+    border-bottom-right-radius: 60% 15%;
+    margin-bottom: 15px;
+}
+
+.id-card-header-back h2 {
+    font-size: 18px;
+}
+
+.id-card-terms {
+    padding: 0 30px;
+    text-align: left;
+}
+
+.id-card-terms ul {
+    list-style:  upper-roman;
+    font-size: 14px;
+    color: #333;
+}
+
+.id-card-terms ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.id-card-emergency {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e6f7ff;
+    border-left: 4px solid #004aad;
+    font-size: 14px;
+    color: #333;
+}
+
+.id-card-emergency p {
+    margin-bottom: 5px;
+}
+
+.id-card-emergency strong {
+    font-size: 16px;
+    color: #004aad;
+}
+
+.id-card-signature {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.id-card-signature p {
+    margin: 5px 0;
+}
+
+.id-card-signature p:first-child {
+    margin-bottom: 10px;
+    color: #004aad;
+}
+
+/* Button styling */
+#edit-button, #download-button {
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#edit-button:hover, #download-button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive layout for mobile screens */
+@media (max-width: 768px) {
+    #id-card-wrapper {
+        flex-direction: column; /* Stack front and back cards vertically */
+        align-items: center;
+    }
+    
+    .id-card, .id-card-back {
+        width: 90%; /* Full width on mobile */
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .id-card, .id-card-back {
+        width: 95%;
+        max-width: 320px;
+    }
+}

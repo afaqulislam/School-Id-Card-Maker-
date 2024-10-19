@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern ID Card Template</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <h2 class="logo">
+        <span class="span">E</span>ditable <span class="span">S</span>chool  <span class="span">I</span>D  <span class="span">C</span>ard 
+        <span class="span">G</span>enerator
+      </h2>
+      <h4> Built By <span class="span-built">Afaq Ul Islam</span></h4>
+    <!-- Wrapper for front and back sides of the ID card in line -->
+    <div id="id-card-wrapper">
+        <!-- Front Side of the ID Card -->
+        <div class="id-card">
+            <div class="id-card-header">
+                <h2 contenteditable="false">School Name Here</h2>
+                <h3 contenteditable="false">IDENTITY CARD</h3>
+            </div>
+            <div class="id-card-photo">
+                <img
+                    contenteditable="false"
+                    src="profile.png"
+                    alt="John David"
+                    id="profile-image"
+                />
+            </div>
+            <div class="id-card-details">
+                <h3 contenteditable="false" id="name">Your Name</h3>
+                <p contenteditable="false">
+                    <strong>ID No:</strong> <span id="id-no">01234</span>
+                </p>
+                <p contenteditable="false">
+                    <strong>Class:</strong> <span id="class">10-A</span>
+                </p>
+                <p contenteditable="false">
+                    <strong>DOB:</strong> <span id="dob">15/01/2005</span>
+                </p>
+                <p contenteditable="false">
+                    <strong>Address:</strong> <span id="address">123 Main St, City</span>
+                </p>
+                <p contenteditable="false">
+                    <strong>Phone:</strong> <span id="phone">+123456789</span>
+                </p>
+            </div>
+            <div class="id-card-footer">
+                <p contenteditable="false">Enter to learn, go to survey</p>
+            </div>
+        </div>
+
+        <!-- Back Side of the ID Card -->
+        <div class="id-card-back">
+            <div class="id-card-header-back">
+                <h2 contenteditable="false">Terms and Conditions</h2>
+            </div>
+            <div class="id-card-terms">
+                <ul>
+                    <li contenteditable="false">Card must be carried at all times.</li>
+                    <li contenteditable="false">Report lost or stolen cards immediately.</li>
+                    <li contenteditable="false">This card is non-transferable.</li>
+                </ul>
+            </div>
+            <div class="id-card-emergency">
+                <p contenteditable="false">For emergency call:</p>
+                <p contenteditable="false"><strong>+123 456 789</strong></p>
+            </div>
+            <div class="id-card-signature">
+                <p>______________________</p>
+                <p contenteditable="false">Authorized Signature</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button id="edit-button" onclick="toggleEdit()">Edit Card</button>
+        <button id="download-button" onclick="downloadCard()">Download Card</button>
+    </div>
+    
+    <!-- Include html2pdf library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
