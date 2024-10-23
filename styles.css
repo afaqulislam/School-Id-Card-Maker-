@@ -204,9 +204,15 @@ h4{
 }
 
 /* Button styling */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    margin-top: 20px;        /* Adjust the margin as needed */
+}
+
 #edit-button, #download-button {
-    margin-top: 15px;
-    margin-left: 50px;
+    margin: 0 10px;          /* Spacing between buttons */
     padding: 8px 16px;
     font-size: 16px;
     background-color: #4CAF50;
